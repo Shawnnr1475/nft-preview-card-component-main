@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+:root{
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyane: hsl(178, 100%, 50%);
+
+    /*neutral colors*/
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+
+    --font-size : 18px;
+    --font : 'Outfit', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+p{
+    font-size: var(--font-size);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--desktop-width);
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.card{
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card > img{
+    width: 280px;
+    height: 280px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+}
+
+.content{
+    width: 280px;
+}
+
+.content > p{
+    width: 300px;
+    color: var(--soft-blue);
+    margin-top: 20px;
+}
+
+.cyan{
+    color:var(--cyane);
+    margin-right: 40px;
+}
+
+.content > h2{
+    color: white;
+}
+
+.creator{
+    margin-top: 10px;
+    border-top: 1px solid var(--line-color);
+    padding-top: 10px;
+    display: flex;
+    flex: 3;
+    align-items: center;
+}
+
+.creator img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px var(--line-color);
+    margin-right: 10px;
+}
+
+.creator p{
+    color: white;
+}
+
+.creator span{
+    color: var(--soft-blue);
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: var(--mobile-width);
+  }
+}
