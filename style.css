@@ -11,7 +11,7 @@
     --desktop-width: 1440px;
     /* primary colors */
     --soft-blue: hsl(215, 51%, 70%);
-    --cyane: hsl(178, 100%, 50%);
+    --cyan: hsl(178, 100%, 50%);
 
     /*neutral colors*/
     --main-bg-color: hsl(217, 54%, 11%);
@@ -54,30 +54,67 @@ p{
     align-items: center;
 }
 
-.card > img{
+.img-container{
+    width: 280px;
+    height: 280px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.view{
+    width: 280px;
+    height: 280px;
+    background-color: rgba(0, 255, 247, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.view:hover{
+    opacity: 1;
+}
+
+.img-container > img{
     width: 280px;
     height: 280px;
     border-radius: 2%;
-    margin-bottom: 20px;
 }
 
 .content{
     width: 280px;
+    margin-top: 25px;
 }
 
 .content > p{
     width: 300px;
     color: var(--soft-blue);
     margin-top: 20px;
+    font-weight: 300;
+    font-size: var(--font-size);
 }
 
 .cyan{
-    color:var(--cyane);
+    color:var(--cyan);
     margin-right: 40px;
 }
 
-.content > h2{
+.content > label{
     color: white;
+    font-size: var(--font-size);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content > label:hover{
+    color: var(--cyan);
 }
 
 .creator{
@@ -98,11 +135,16 @@ p{
 }
 
 .creator p{
-    color: white;
+    color: var(--soft-blue);
+    font-weight: 400;
 }
 
 .creator span{
-    color: var(--soft-blue);
+    color: white;
+    cursor: pointer;
+}
+.creator span:hover{
+    color: var(--cyan);
 }
 
 @media only screen and (max-width: 600px) {
